@@ -527,6 +527,18 @@ body {
   padding: 2rem 0;
 }
 
+.contact-section .form .submit-btn {
+  padding: 2em;
+  width: 50%;
+  margin: 2em 0;
+  cursor: pointer;
+}
+
+.contact-section .form .submit-btn:focus, .contact-section .form .submit-btn:hover {
+  background-color: white;
+  color: black;
+}
+
 .contact-section .form input {
   background-color: transparent;
   border: 3px solid white;

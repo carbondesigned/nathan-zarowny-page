@@ -447,6 +447,19 @@ body {
     z-index: 1;
     padding: 2rem 0;
 
+    .submit-btn {
+      padding: 2em;
+      width: 50%;
+      margin: 2em 0;
+      cursor: pointer;
+
+      &:focus,
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+
     input {
       background-color: transparent;
       border: 3px solid white;
