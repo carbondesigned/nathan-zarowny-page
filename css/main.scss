@@ -1,0 +1,743 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+$clr-accent: #FF8401;
+$letter-spacing: 20px;
+
+@font-face {
+  font-family: 'Akira Expanded';
+  src: url('/Akira-Expanded-Demo.otf');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Akira Expanded', 'Heebo';
+  overflow-x: hidden;
+}
+
+.bg-wrapper {
+  background-image: url('/img/background-img.png');
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5em 0rem;
+  position: fixed;
+  color: white;
+  z-index: 2;
+  animation: hoverDown 1s;
+
+  .logo {
+    cursor: pointer;
+    position: relative;
+    transition: 300ms;
+    font-size: clamp(0.4em, 3vw, 2em);
+    margin: 0 0rem 0 5rem;
+
+    &:hover {
+      transform: translateX(10px) scale(0.95);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -0.2rem;
+      left: 1rem;
+      border-radius: 30px;
+      width: 50%;
+      height: 0.2rem;
+      transform: scaleX(0);
+      transform-origin: left;
+      background-color: $clr-accent;
+      transition: 300ms;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  .contact-cta {
+    padding: 1rem;
+
+    a {
+      color: white;
+      text-decoration: none;
+      padding: 0.2em 1em;
+      font-family: 'Heebo';
+      font-weight: 600;
+      border: 2px solid white;
+      cursor: pointer;
+      transition: 300ms;
+      font-size: clamp(0.8em, 3vw, 1.5em);
+
+      &:hover,
+      &:focus {
+        background-color: white;
+        color: black;
+        transform: scale(0.95);
+      }
+    }
+  }
+}
+
+.upper {
+  color: white;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .main {
+    background-image: url('/img/main-bg-mobile.png');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .name-title {
+      color: $clr-accent;
+      font-size: clamp(0.9em, 4.5vw, 6em);
+      width: 100%;
+      overflow: visible;
+      white-space: nowrap;
+      margin-top: 4rem;
+      position: relative;
+      animation: letterSpacing 1s;
+
+
+      &::after {
+        position: absolute;
+        content: 'Alternative Pop';
+        color: white;
+        font-size: 0.5em;
+        left: 2rem;
+      }
+    }
+
+    .names {
+      font-size: clamp(2em, 7vw, 8em);
+      -webkit-text-stroke: 2px;
+      -webkit-text-stroke-color: white;
+      color: transparent;
+      padding: 0;
+      white-space: nowrap;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: 'Nathan Zarowny';
+        padding: 1em 0;
+        opacity: 0.50;
+      }
+
+      &::before {
+        position:absolute;
+        bottom: 50px;
+        left: 0;
+        content: 'Nathan Zarowny';
+        padding: 0.5em 0;
+        opacity: 0.25;
+      }
+    }
+  }
+}
+
+.lower {
+  height: 50vh;
+  width: 100%;
+  padding: 1rem 2rem;
+  color: white;
+
+  .new-releases {
+    width: 65%;
+    height: 65%;
+    margin: 2rem 0 5rem 0;
+
+    .release-title {
+      font-size: clamp(1em, 3vw, 3em);
+      white-space: nowrap;
+      padding: 1rem 0;
+      letter-spacing: .1rem;
+    }
+
+    .song {
+      width: 100%;
+      height: 100%;
+      padding-left: 2rem;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 90%;
+        width: 0.2rem;
+        background-color: white;
+        transition: 300ms;
+      }
+
+      &:hover,
+      &:focus {
+
+        &::after {
+          width: 0.5rem;
+          border-radius: 30px;
+          background-color: $clr-accent;
+        }
+      }
+
+      .cover {
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-image: url('/img/cover-bg.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: 300ms;
+        position: relative;
+        overflow: hidden;
+
+        &:before {
+          content: 'OUT NOW';
+          position:absolute;
+          bottom: 1.5em;
+          font-size: clamp(1.2em, 3vw, 10em);
+          -webkit-text-stroke: 1px;
+          -webkit-text-stroke-color: white;
+          color: transparent;
+          animation: hoverUp 1s;
+          transition: 300ms;
+          letter-spacing: 10px;
+          z-index: 0;
+          pointer-events: none;
+          opacity: 0.25;
+          white-space: nowrap;
+        }
+
+        &:after {
+          content: 'OUT NOW';
+          position:absolute;
+          bottom: 0em;
+          font-size: clamp(1.2em, 3vw, 10em);
+          -webkit-text-stroke: 1px;
+          -webkit-text-stroke-color: white;
+          opacity: 0.5;
+          color: transparent;
+          animation: hoverUp 1s;
+          transition: 300ms;
+          letter-spacing: 10px;
+          z-index: 0;
+          pointer-events: none;
+          white-space: nowrap;
+        }
+
+        &:hover,
+        &:focus {
+          transform: translateX(10px);
+
+          .song-title {
+            transform: scale(1.05);
+            letter-spacing: 10px;
+          }
+        }
+
+        .song-title {
+          font-size: clamp(1.1em, 3vw, 5em);
+          white-space: nowrap;
+          transition: 300ms;
+        }
+
+        .cover-cta {
+          a {
+            color: white;
+            padding: 0.5rem 1rem;
+            border: 3px solid white;
+            text-decoration: none;
+            font-size: clamp(1.2em, 2.5vw, 4em);
+            transition: 300ms;
+            z-index: 2;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+              color: black;
+              background-color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .media {
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+
+    .items {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-evenly;
+      color: white;
+
+      .links {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+      }
+
+      p {
+        font-family: 'Heebo';
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: clamp(1em, 1vw, 2em);
+
+        &:hover,
+        &:focus {
+
+          .fa-chevron-right {
+          transform: translateX(5px);
+          }
+        }
+
+        .fa-chevron-right {
+          font-size: 0.8em;
+          padding-left: 0.5em;
+        }
+      }
+
+      i {
+        font-size: clamp(1.2em, 3vw, 2em);
+        transition: 300ms;
+        cursor: pointer;
+
+
+        &:hover,
+        &:focus {
+          color: $clr-accent;
+          transform: translateY(-10px);
+        }
+      }
+    }
+  }
+}
+
+.cover.hover {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url('/img/cover-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 300ms;
+  -webkit-box-shadow: inset 0px -45px 50px 5px #000000;
+  box-shadow: inset 0px -150px 1500px 5px #000000;
+  border-radius: 30px;
+
+  &:before {
+    content: 'OUT NOW';
+    position:absolute;
+    bottom: 2rem;
+    font-size: clamp(1.2em, 3vw, 10em);
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: white;
+    color: transparent;
+    transform: scale(1.1);
+    transition: 300ms;
+    letter-spacing: 0px;
+    opacity: 0.25;
+    white-space: nowrap;
+  }
+
+  &:after {
+    content: 'OUT NOW';
+    position:absolute;
+    bottom: 0;
+    font-size: clamp(1.2em, 3vw, 10em);
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: white;
+    color: transparent;
+    transform: scale(1.1);
+    transition: 300ms;
+    letter-spacing: 0px;
+    opacity: 0.50;
+    white-space: nowrap;
+  }
+}
+
+.contact-section {
+  width: 100%;
+  height: 100vh;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // background-image: url(/img/light-divider@3000x2000px.jpg);
+  background-size: cover;
+  background-position: left;
+  position: relative;
+  color: white;
+  font-family: 'Heebo';
+
+  .form-title {
+    z-index: 1;
+    font-family: 'Akira Expanded';
+    padding: 2rem 0;
+    font-size: clamp(2em, 3vw, 4em);
+  }
+
+  .form {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    padding: 2rem 0;
+
+    input {
+      background-color: transparent;
+      border: 3px solid white;
+      padding: 1rem;
+      color: white;
+      font-size: 1.2em;
+      outline: none;
+      transition: 300ms;
+
+      &:focus {
+        background-color: white;
+        color: black;
+      }
+    }
+
+    label {
+      padding: 1rem 0 0 0;
+      font-size: clamp(1.3em, 2vw, 2em);
+    }
+
+    .input {
+      background-color: transparent;
+      border: 3px solid white;
+      padding: 1rem;
+      color: white;
+      font-size: 1.2em;
+      outline: none;
+      transition: 300ms;
+
+      &:focus {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}
+
+@keyframes letterSpacing {
+  0% {
+    letter-spacing: $letter-spacing;
+  }
+
+  100% {
+    letter-spacing: 0px;
+  }
+}
+
+@keyframes hoverUp {
+  0% {
+
+    transform: translateY(200%);
+  }
+
+  100% {
+
+    transform: translateY(0%);
+  }
+
+}
+
+@keyframes hoverDown {
+  0% {
+
+    transform: translateY(-200%);
+  }
+
+  100% {
+
+    transform: translateY(0%);
+  }
+
+}
+
+@media screen and(min-width: 1024px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+
+  .upper {
+    justify-content: flex-end;
+
+    .main {
+      background-image: url('/img/main-section-bg.png');
+      background-size: cover;
+      background-position: center;
+      width: 70%;
+      align-items: flex-start;
+
+      .name-title {
+        margin-left: -18rem;
+      }
+
+      .names {
+        padding: 0em 0;
+
+        &::after {
+          padding: 1em 0;
+          bottom: 0;
+        }
+
+        &::before {
+          padding: 1.5em 0;
+        }
+      }
+    }
+  }
+  .lower {
+    width: 50%;
+
+
+    .cover {
+      width: 100%;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      background-image: url('/img/cover-bg.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: 300ms;
+      position: relative;
+      overflow: hidden;
+
+      &:before {
+        content: 'OUT NOW';
+        position:absolute;
+        bottom: 1rem;
+        font-size: clamp(1.2em, 3vw, 10em);
+        -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: white;
+        color: transparent;
+        animation: hoverUp 1s;
+        transition: 300ms;
+        letter-spacing: $letter-spacing;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0.25;
+        white-space: nowrap;
+      }
+
+      &:after {
+        content: 'OUT NOW';
+        position:absolute;
+        bottom: 0rem;
+        font-size: clamp(1.2em, 3vw, 10em);
+        -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: white;
+        opacity: 0.5;
+        color: transparent;
+        animation: hoverUp 1s;
+        transition: 300ms;
+        letter-spacing: $letter-spacing;
+        z-index: 0;
+        pointer-events: none;
+        white-space: nowrap;
+        padding: 1rem 0;
+      }
+    }
+  }
+}
+
+@media screen and(min-width: 1920px) {
+
+  body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: none;
+  }
+
+  .bg-wrapper {
+    display: grid;
+    grid-template-columns:
+      minmax(1em, 1fr)
+      repeat(3, minmax(10rem, 30rem))
+      minmax(1em, 1fr);
+    gap: 2em;
+  }
+
+  .upper {
+    grid-column: 2 / 6;
+    width: 100%;
+    height: 100vh;
+
+    .main {
+      margin: 0;
+
+
+      .names {
+        padding: 1rem 0;
+
+        &::after {
+          padding: 7rem 0;
+        }
+
+        &::before {
+          padding: 10rem 0;
+        }
+      }
+    }
+
+    h1 {
+      grid-column: 1 / 5;
+      margin: 0;
+      margin-left: -15rem;
+    }
+  }
+
+  .lower {
+    grid-column: 1 / 2;
+    position: absolute;
+    height: 100vh;
+    top: 20rem;
+
+    .new-releases {
+      grid-column: 1 / 3;
+    }
+
+    .cover {
+      width: 100%;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      background-image: url('/img/cover-bg.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: 300ms;
+      position: relative;
+      overflow: hidden;
+
+      &:before {
+        content: 'OUT NOW';
+        position:absolute;
+        bottom: 1rem;
+        font-size: clamp(1.2em, 3vw, 10em);
+        -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: white;
+        color: transparent;
+        animation: hoverUp 1s;
+        transition: 300ms;
+        letter-spacing: $letter-spacing;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0.25;
+        white-space: nowrap;
+        padding-bottom: 5rem;
+      }
+
+      &:after {
+        content: 'OUT NOW';
+        position:absolute;
+        bottom: 0rem;
+        font-size: clamp(1.2em, 3vw, 10em);
+        -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: white;
+        opacity: 0.5;
+        color: transparent;
+        animation: hoverUp 1s;
+        transition: 300ms;
+        letter-spacing: $letter-spacing;
+        z-index: 0;
+        pointer-events: none;
+        white-space: nowrap;
+        padding: 8rem 0;
+      }
+    }
+
+    .media {
+      grid-column: 1 / 3;
+      width: 50%;
+    }
+  }
+}
+
+.contact-section {
+  grid-column: 1 / 6;
+}
+
+@media screen and(min-width: 2560px) {
+  .upper {
+
+    .main {
+
+      h1 {
+        margin-left: -40rem;
+      }
+    }
+  }
+}
