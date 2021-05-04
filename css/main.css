@@ -171,7 +171,7 @@ body {
 
 .upper .main .names {
   font-size: clamp(2em, 7vw, 8em);
-  -webkit-text-stroke: 2px;
+  -webkit-text-stroke: 0.025em;
   -webkit-text-stroke-color: white;
   color: transparent;
   padding: 0;
@@ -188,19 +188,17 @@ body {
 
 .upper .main .names::after {
   position: absolute;
-  bottom: 0;
+  bottom: 1em;
   left: 0;
   content: 'Nathan Zarowny';
-  padding: 1em 0;
   opacity: 0.50;
 }
 
 .upper .main .names::before {
   position: absolute;
-  bottom: 50px;
+  bottom: 2em;
   left: 0;
   content: 'Nathan Zarowny';
-  padding: 0.5em 0;
   opacity: 0.25;
 }
 
@@ -691,6 +689,41 @@ footer .media .links i {
   }
 }
 
+@media only screen and (orientation: landscape) {
+  .upper {
+    height: 100vh;
+  }
+  .lower {
+    height: 100vh;
+  }
+  .contact-section {
+    height: 100vh;
+  }
+  .contact-section .form {
+    margin: 0;
+    height: 75%;
+    width: 50%;
+    padding: 5em 2em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact-section .form input {
+    padding: 0.3em;
+  }
+  .contact-section .form .submit-btn {
+    margin-bottom: 5em;
+    padding: 0.2em;
+  }
+  .contact-section h3 {
+    padding: 0;
+  }
+  footer {
+    padding: 0;
+    background-color: white;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .navbar {
     -webkit-box-pack: justify;
@@ -713,16 +746,6 @@ footer .media .links i {
   }
   .upper .main .name-title {
     margin-left: -18rem;
-  }
-  .upper .main .names {
-    padding: 0em 0;
-  }
-  .upper .main .names::after {
-    padding: 1em 0;
-    bottom: 0;
-  }
-  .upper .main .names::before {
-    padding: 1.5em 0;
   }
   .lower {
     width: 50%;
@@ -821,15 +844,6 @@ footer .media .links i {
   }
   .upper .main {
     margin: 0;
-  }
-  .upper .main .names {
-    padding: 1rem 0;
-  }
-  .upper .main .names::after {
-    padding: 7rem 0;
-  }
-  .upper .main .names::before {
-    padding: 10rem 0;
   }
   .upper h1 {
     -ms-grid-column: 1;

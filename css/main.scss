@@ -145,7 +145,7 @@ body {
 
     .names {
       font-size: clamp(2em, 7vw, 8em);
-      -webkit-text-stroke: 2px;
+      -webkit-text-stroke: 0.025em;
       -webkit-text-stroke-color: white;
       color: transparent;
       padding: 0;
@@ -157,19 +157,17 @@ body {
 
       &::after {
         position: absolute;
-        bottom: 0;
+        bottom: 1em;
         left: 0;
         content: 'Nathan Zarowny';
-        padding: 1em 0;
         opacity: 0.50;
       }
 
       &::before {
         position:absolute;
-        bottom: 50px;
+        bottom: 2em;
         left: 0;
         content: 'Nathan Zarowny';
-        padding: 0.5em 0;
         opacity: 0.25;
       }
     }
@@ -575,6 +573,50 @@ footer {
 
 }
 
+@media only screen and (orientation: landscape) {
+  .upper {
+    height: 100vh;
+  }
+
+  .lower {
+    height: 100vh;
+  }
+
+  .media {
+
+  }
+
+  .contact-section {
+    height: 100vh;
+
+    .form {
+      margin: 0;
+      height: 75%;
+      width: 50%;
+      padding: 5em 2em;
+      justify-content: center;
+
+      input {
+        padding: 0.3em;
+      }
+
+      .submit-btn {
+        margin-bottom: 5em;
+        padding: 0.2em;
+      }
+    }
+
+    h3 {
+      padding: 0;
+    }
+  }
+
+  footer {
+    padding: 0;
+    background-color: white;
+  }
+}
+
 @media screen and(min-width: 1024px) {
   .navbar {
     justify-content: space-between;
@@ -595,18 +637,18 @@ footer {
         margin-left: -18rem;
       }
 
-      .names {
-        padding: 0em 0;
+      // .names {
+      //   padding: 0em 0;
 
-        &::after {
-          padding: 1em 0;
-          bottom: 0;
-        }
+      //   &::after {
+      //     padding: 1em 0;
+      //     bottom: 0;
+      //   }
 
-        &::before {
-          padding: 1.5em 0;
-        }
-      }
+      //   &::before {
+      //     padding: 1.5em 0;
+      //   }
+      // }
     }
   }
   .lower {
@@ -701,19 +743,6 @@ footer {
 
     .main {
       margin: 0;
-
-
-      .names {
-        padding: 1rem 0;
-
-        &::after {
-          padding: 7rem 0;
-        }
-
-        &::before {
-          padding: 10rem 0;
-        }
-      }
     }
 
     h1 {
