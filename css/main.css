@@ -528,10 +528,13 @@ body {
 }
 
 .contact-section .form .submit-btn {
-  padding: 2em;
+  padding: 1em;
   width: 50%;
   margin: 2em 0;
   cursor: pointer;
+  background-color: white;
+  color: black;
+  font-family: 'Akira Expanded';
 }
 
 .contact-section .form .submit-btn:focus, .contact-section .form .submit-btn:hover {
@@ -734,6 +737,9 @@ body {
     pointer-events: none;
     white-space: nowrap;
     padding: 1rem 0;
+  }
+  .contact-section .form {
+    width: 50%;
   }
 }
 

@@ -448,10 +448,13 @@ body {
     padding: 2rem 0;
 
     .submit-btn {
-      padding: 2em;
+      padding: 1em;
       width: 50%;
       margin: 2em 0;
       cursor: pointer;
+      background-color: white;
+      color: black;
+      font-family: 'Akira Expanded';
 
       &:focus,
       &:hover {
@@ -620,6 +623,13 @@ body {
         white-space: nowrap;
         padding: 1rem 0;
       }
+    }
+  }
+
+  .contact-section {
+
+    .form {
+      width: 50%;
     }
   }
 }
