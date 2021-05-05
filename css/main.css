@@ -12,11 +12,11 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   font-family: 'Akira Expanded', 'Heebo';
-  overflow-x: hidden;
 }
 
 .bg-wrapper {
@@ -25,6 +25,7 @@ body {
   width: 100%;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .navbar {
@@ -223,10 +224,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .lower .recent .genre {
@@ -799,7 +800,6 @@ body {
 
 footer {
   width: 100%;
-  height: 4vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -825,7 +825,7 @@ footer {
 
 footer h4 {
   cursor: pointer;
-  padding: 1em 0;
+  padding: 0.5em 0;
   font-size: clamp(0.9em, 2.5vw, 0.8em);
   font-weight: 800;
   letter-spacing: 2px;
@@ -834,6 +834,10 @@ footer h4 {
 footer a {
   color: black;
   text-decoration: none;
+}
+
+footer .media {
+  padding: 1em 0;
 }
 
 footer .media .items {
@@ -1004,6 +1008,12 @@ footer .media .links i {
   .lower {
     width: 100%;
   }
+  .lower .recent {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
   .lower .cover {
     width: 100%;
     height: 90%;
@@ -1088,7 +1098,6 @@ footer .media .links i {
 @media screen and (min-width: 1920px) {
   body {
     margin: 0;
-    overflow-x: hidden;
     background-color: none;
   }
   .bg-wrapper {

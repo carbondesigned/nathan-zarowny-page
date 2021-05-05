@@ -14,6 +14,8 @@ $letter-spacing: 20px;
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+
 }
 
 body {
@@ -26,9 +28,7 @@ body {
   width: 100%;
   background-size: cover;
   background-position: center;
-  overflow-x: hidden;
   position: relative;
-  overflow-y: scroll !important;
   // position: absolute;
   // top: 0;
   // left: 0;
@@ -194,7 +194,7 @@ body {
     height: 65%;
     margin: 1em 0 2em 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
     .genre {
       text-align: center;
@@ -699,7 +699,6 @@ body {
 
 footer {
   width: 100%;
-  height: 4vh;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -716,7 +715,7 @@ footer {
 
   h4 {
     cursor: pointer;
-    padding: 1em 0;
+    padding: 0.5em 0;
     font-size: clamp(0.9em, 2.5vw, 0.8em);
     font-weight: 800;
     letter-spacing: 2px;
@@ -728,7 +727,7 @@ footer {
   }
 
   .media {
-
+    padding: 1em 0;
     .items {
     display: flex;
     }
@@ -859,6 +858,10 @@ footer {
   .lower {
     width: 100%;
 
+    .recent {
+      flex-direction: row;
+    }
+
     .cover {
       width: 100%;
       height: 90%;
@@ -933,7 +936,6 @@ footer {
 
   body {
     margin: 0;
-    overflow-x: hidden;
     background-color: none;
   }
 
