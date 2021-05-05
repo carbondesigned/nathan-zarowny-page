@@ -799,6 +799,7 @@ body {
 
 footer {
   width: 100%;
+  height: 4vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -808,7 +809,7 @@ footer {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  padding: 2rem;
+  padding: 1rem;
   font-size: clamp(1em, 2.5vw, 1em);
   white-space: nowrap;
   -webkit-box-orient: vertical;
@@ -817,6 +818,9 @@ footer {
           flex-direction: column-reverse;
   font-family: 'Heebo', sans-serif;
   font-weight: 800;
+  color: white;
+  z-index: 2;
+  background-color: white;
 }
 
 footer h4 {
@@ -919,16 +923,25 @@ footer .media .links i {
     height: 100vh;
   }
   .media {
-    margin: -4em 0;
+    margin: -3em 0;
   }
   .contact-section {
-    height: 200vh;
+    margin: 8em 0 5em 0;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .contact-section .form {
-    margin: 0;
+    margin: 5em 0 5em 0;
     height: 50%;
     width: 50%;
-    padding: 5em 2em;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -945,9 +958,9 @@ footer .media .links i {
   }
   .newsletter-cta {
     padding: 1em;
+    margin-bottom: 5em;
   }
   footer {
-    padding: 5em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -961,6 +974,7 @@ footer .media .links i {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    height: 100%;
   }
 }
 
