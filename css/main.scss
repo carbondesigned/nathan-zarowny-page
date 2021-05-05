@@ -205,7 +205,6 @@ body {
 
     }
 
-
     .slot-one {
       width: 100%;
       height: 100%;
@@ -306,7 +305,8 @@ body {
             padding: 0.5rem 1rem;
             border: 3px solid white;
             text-decoration: none;
-            font-size: clamp(1em, 2.5vw, 4em);
+            font-size: clamp(0.4em, 2vw, 2.5em);
+            white-space: nowrap;
             transition: 300ms;
             z-index: 2;
             cursor: pointer;
@@ -422,10 +422,11 @@ body {
           padding: 0.5rem 1rem;
           border: 3px solid white;
           text-decoration: none;
-          font-size: clamp(0.8em, 2vw, 1.6em);
+          font-size: clamp(0.4em, 2vw, 2.5em);
           transition: 300ms;
           z-index: 2;
           cursor: pointer;
+          white-space: nowrap;
 
           &:hover,
           &:focus {
@@ -783,15 +784,15 @@ footer {
   }
 
   .media {
-
+    margin: -4em 0;
   }
 
   .contact-section {
-    height: 100vh;
+    height: 200vh;
 
     .form {
       margin: 0;
-      height: 75%;
+      height: 50%;
       width: 50%;
       padding: 5em 2em;
       justify-content: center;
@@ -811,9 +812,17 @@ footer {
     }
   }
 
+  .newsletter-cta {
+    // margin: 2em;
+    padding: 1em;
+  }
+
   footer {
-    padding: 0;
-    background-color: white;
+    padding: 5em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 

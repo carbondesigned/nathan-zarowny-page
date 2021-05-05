@@ -350,7 +350,8 @@ body {
   padding: 0.5rem 1rem;
   border: 3px solid white;
   text-decoration: none;
-  font-size: clamp(1em, 2.5vw, 4em);
+  font-size: clamp(0.4em, 2vw, 2.5em);
+  white-space: nowrap;
   -webkit-transition: 300ms;
   transition: 300ms;
   z-index: 2;
@@ -475,11 +476,12 @@ body {
   padding: 0.5rem 1rem;
   border: 3px solid white;
   text-decoration: none;
-  font-size: clamp(0.8em, 2vw, 1.6em);
+  font-size: clamp(0.4em, 2vw, 2.5em);
   -webkit-transition: 300ms;
   transition: 300ms;
   z-index: 2;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .lower .recent .slot-two .cover2 .cta:hover, .lower .recent .slot-two .cover2 .cta:focus {
@@ -916,12 +918,15 @@ footer .media .links i {
   .lower {
     height: 100vh;
   }
+  .media {
+    margin: -4em 0;
+  }
   .contact-section {
-    height: 100vh;
+    height: 200vh;
   }
   .contact-section .form {
     margin: 0;
-    height: 75%;
+    height: 50%;
     width: 50%;
     padding: 5em 2em;
     -webkit-box-pack: center;
@@ -938,9 +943,24 @@ footer .media .links i {
   .contact-section h3 {
     padding: 0;
   }
+  .newsletter-cta {
+    padding: 1em;
+  }
   footer {
-    padding: 0;
-    background-color: white;
+    padding: 5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
