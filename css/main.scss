@@ -1036,19 +1036,32 @@ footer {
       width: 50%;
     }
   }
-}
+  .contact-section {
+    grid-column: 1 / 6;
+    height: 100vh;
 
-.contact-section {
-  grid-column: 1 / 6;
-  height: 100vh;
+    .form {
 
-  .form {
+      .submit-btn {
+        padding: 1rem;
+      }
+    }
 
-    .submit-btn {
-      padding: 1rem;
+  }
+
+  footer {
+    padding: 3em;
+    width: 100vw;
+    flex-direction: column-reverse;
+
+    h4{
+      padding: 3em;
     }
   }
 }
+
+
+
 
 @media screen and(min-width: 2560px) {
   .upper {
