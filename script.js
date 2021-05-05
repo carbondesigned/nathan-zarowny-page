@@ -1,11 +1,18 @@
 const songCover = document.getElementById("song-cover")
+const coverTwo = document.querySelector(".cover2")
 
 songCover.addEventListener("mouseenter", () => {
   songCover.classList.add("hover")
-  console.log("hi")
 })
 
 songCover.addEventListener("mouseleave", () => {
   songCover.classList.remove("hover")
-  console.log("hi")
+})
+
+coverTwo.addEventListener("mouseenter", () => {
+  coverTwo.classList.add("hover")
+})
+
+coverTwo.addEventListener("mouseleave", () => {
+  coverTwo.classList.remove("hover")
 })
