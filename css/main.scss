@@ -14,12 +14,10 @@ $letter-spacing: 20px;
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
   font-family: 'Akira Expanded', 'Heebo';
-  overflow-x: hidden;
 }
 
 .bg-wrapper {
@@ -29,6 +27,7 @@ body {
   background-size: cover;
   background-position: center;
   overflow-x: hidden;
+  position: relative;
   // position: absolute;
   // top: 0;
   // left: 0;
