@@ -4,102 +4,119 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Icon -->
   <link rel="shortcut icon" type="image/png" href="/img/tab-icon.png">
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- css -->
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- JS -->
   <script src="/script.js" defer></script>
   <title>Nathan Zarowny</title>
 </head>
 <body>
-  <div class="bg-wrapper">
-  <nav class="navbar">
-    <div class="logo">
-      <a href="#main">Nathan Zarowny</a>
-    </div>
-    <div class="contact-cta"><a href="#contact-section">Contact</a></div>
-  </nav>
+  <div class="wrapper">
+    <nav class="navbar-desktop">
+      <div class="logo">
+        <a href="#hero">Nathan Zarowny</a>
+      </div>
 
-  <section class="upper">
-    <div class="main" id="main">
-        <div class="name-title">
-          <h1>Nathan Zarowny</h1>
+      <ul class="nav-links-desktop">
+        <li class="nav-link"><a href="/contact.html" class="cta-nav">Contact</a></li>
+        <li class="nav-link"><a href="/newsletter.html" class="cta-nav newsletter-cta">Newsletter</a></li>
+      </ul>
+    </nav>
+
+    <nav class="navbar-mobile">
+      <div class="logo">
+        <a href="#hero">Nathan Zarowny</a>
+      </div>
+
+      <ul class="nav-links-mobile">
+        <li class="nav-link"><a href="/contact.html" class="cta-nav contact-cta">Contact</a></li>
+        <li class="nav-link"><a href="/newsletter.html" class="cta-nav newsletter-cta">Newsletter</a></li>
+
+        <li class="nav-link"><div class="media">
+          <div class="items">
+              <div class="links">
+                <a href="https://www.instagram.com/nathan_zarowny/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UC2NI5_bZRtcR8w9Re4wPNnQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://open.spotify.com/playlist/37i9dQZF1DX5DfG8gQdC3F?si=UNPYT23SQGi32diuBzmujA" target="_blank"><i class="fab fa-spotify"></i></a>
+                <a href="https://www.tiktok.com/@nathan_zarowny?lang=en" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
         </div>
-          <div class="names">Nathan Zarowny</div>
-    </div>
-  </section>
+      </li>
+      </ul>
 
-  <section class="lower">
-    <h3 class="recent-title">Recent</h3>
-    <div class="recent">
-      <div class="slot-one">
-        <div class="cover" id="song-cover">
-          <div class="genre">
-            <p>Song Release</p>
-          <h3 class="title">Sad Boy</h3>
-        </div>
-            <div class="cover-cta"><a href="https://orcd.co/vyejm90" target="_blank">Out Now</a></div>
-        </div>
+      <div class="hamburger">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
       </div>
-      <div class="slot-two">
-      <div class="cover2">
-        <div class="genre">
-          <p>Interview</p>
-        <div class="interview-title">Interview with The Music Enthusiast</div>
-      </div>
-        <a href="https://www.youtube.com/watch?v=3KjhyZen3ZE" class="cta">Watch Now</a>
-      </div>
-    </div>
-    </div>
-
-    <div class="media">
-      <div class="items">
-        <a href="https://linktr.ee/nathanzarowny" target="_blank"><p>Find on <i class="fas fa-chevron-right"></i></p></a>
-          <div class="links">
-            <a href="https://www.instagram.com/nathan_zarowny/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.youtube.com/channel/UC2NI5_bZRtcR8w9Re4wPNnQ" target="_blank"><i class="fab fa-youtube"></i></a>
-          <a href="https://open.spotify.com/playlist/37i9dQZF1DX5DfG8gQdC3F?si=UNPYT23SQGi32diuBzmujA" target="_blank"><i class="fab fa-spotify"></i></a>
-          <a href="https://www.tiktok.com/@nathan_zarowny?lang=en" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </nav>
+    <main class="main">
+      <div class="upper">
+        <div class="hero" id="hero">
+          <div class="title">
+            <h1 class="main-name">Nathan Zarowny</h1>
+            <p class="sub-title">Alternative Pop</p>
+          </div>
+          <div class="names">
+            <h3 class="name3">Nathan Zarowny</h3>
+            <h3 class="name2">Nathan Zarowny</h3>
+            <h3 class="origin-name">Nathan Zarowny</h3>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="contact-section" id="contact-section">
-    <h3 class="form-title">Contact</h3>
-
-    <form class="form" name="contact" method="POST" data-netlify="true">
-
-      <label for="text">Enter Your Name</label>
-      <input type="text" class="Name" required>
-
-      <label for="email">Enter Your Email</label>
-      <input type="email" required>
-
-      <label for="textarea">Questions? Information?</label>
-      <textarea name="message" id="input" cols="30" rows="10" class="input"></textarea>
-
-      <input type="submit" class="submit-btn">
-    </form>
-    <a href="#" class="newsletter-cta">Join Newsletter</a>
-  </section>
-
-
-<footer>
-  <h4><a href="https://www.instagram.com/carbondesigned/" target="_blank">made by @carbondesined</a></h4>
-  <div class="media">
-    <div class="items">
-      <a href="https://linktr.ee/nathanzarowny" target="_blank"><p>Find on <i class="fas fa-chevron-right"></i></p></a>
-        <div class="links">
-          <a href="https://www.instagram.com/nathan_zarowny/" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.youtube.com/channel/UC2NI5_bZRtcR8w9Re4wPNnQ" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://open.spotify.com/playlist/37i9dQZF1DX5DfG8gQdC3F?si=UNPYT23SQGi32diuBzmujA" target="_blank"><i class="fab fa-spotify"></i></a>
-        <a href="https://www.tiktok.com/@nathan_zarowny?lang=en" target="_blank"><i class="fab fa-tiktok"></i></a>
+      <div class="lower">
+        <div class="recent">
+          <h2 class="recent-title">Recent</h2>
+          <div class="posts">
+            <div class="post">
+              <div class="header">
+                <p class="genre">Song Release</p>
+                <h2 class="post-title">Sad Boy</h2>
+              </div>
+                  <a href="https://orcd.co/vyejm90" class="cta">Out Now</a>
+            </div>
+            <div class="post">
+              <div class="header">
+                <p class="genre">Interview</p>
+                <h2 class="post-title">Interview with TME</h2>
+              </div>
+                  <a href="#" class="cta">Watch out</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
+    <footer class="footer">
+      <div class="media">
+        <div class="items">
+            <div class="links">
+              <a href="https://www.instagram.com/nathan_zarowny/" target="_blank"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.youtube.com/channel/UC2NI5_bZRtcR8w9Re4wPNnQ" target="_blank"><i class="fab fa-youtube"></i></a>
+              <a href="https://open.spotify.com/playlist/37i9dQZF1DX5DfG8gQdC3F?si=UNPYT23SQGi32diuBzmujA" target="_blank"><i class="fab fa-spotify"></i></a>
+              <a href="https://www.tiktok.com/@nathan_zarowny?lang=en" target="_blank"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="section-links">
+            <a href="/contact.html" class="contact">Contact</a>
+            <a href="/newsletter.html" class="contact">Join Newsletter</a>
+
+        </div>
+        <p><a href="https://www.instagram.com/carbondesigned/">developed by @carbondesigned</a></p>
+    </footer>
   </div>
-</footer>
-</div>
+
 </body>
 </html>
