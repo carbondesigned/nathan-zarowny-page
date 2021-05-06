@@ -287,7 +287,6 @@ body {
   color: white;
   margin: 5em 0 0 2em;
   height: 100vh;
-  z-index: -1;
 }
 
 .lower .recent {
@@ -303,7 +302,6 @@ body {
   width: 100%;
   height: 100%;
   margin: 2em 0 0 0;
-  z-index: -1;
 }
 
 .lower .recent .posts .post {
@@ -327,7 +325,6 @@ body {
       justify-content: space-around;
   text-align: center;
   position: relative;
-  z-index: 0;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
@@ -348,7 +345,6 @@ body {
   left: 0;
   -webkit-transition: 300ms;
   transition: 300ms;
-  z-index: 0;
 }
 
 .lower .recent .posts .post:hover, .lower .recent .posts .post:focus {
@@ -764,6 +760,7 @@ body {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
+    z-index: 10;
     padding: 3em;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -772,6 +769,8 @@ body {
         justify-content: space-around;
     color: white;
     position: fixed;
+    -webkit-box-shadow: inset 0px 50px 2000px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 50px 50px 5px rgba(0, 0, 0, 0.5);
   }
   .navbar-desktop .logo {
     color: white;
