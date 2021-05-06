@@ -11,7 +11,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
 body {
@@ -47,7 +47,7 @@ body {
   background-color: transparent;
   -webkit-animation: slideDown 500ms;
           animation: slideDown 500ms;
-  z-index: 3;
+  z-index: 10;
 }
 
 .navbar-mobile .logo {
@@ -277,8 +277,8 @@ body {
   width: 100vw;
   color: white;
   margin: 5em 0 0 2em;
-  height: 100%;
-  z-index: 1;
+  height: 100vh;
+  z-index: -1;
 }
 
 .lower .recent {
@@ -294,14 +294,14 @@ body {
   width: 100%;
   height: 100%;
   margin: 2em 0 0 0;
-  z-index: 1;
+  z-index: -1;
 }
 
 .lower .recent .posts .post {
   background-image: url("/img/cover-bg.png");
   background-size: cover;
   background-position: center;
-  height: 50%;
+  height: 35%;
   width: 75%;
   margin: 2em 2em 5em 0;
   display: -webkit-box;
@@ -318,7 +318,7 @@ body {
       justify-content: space-around;
   text-align: center;
   position: relative;
-  z-index: 1;
+  z-index: 0;
   -webkit-transition: 300ms;
   transition: 300ms;
 }
@@ -358,7 +358,6 @@ body {
 }
 
 .lower .recent .posts .post .header {
-  margin: 5em 0 5em 0;
   z-index: 1;
 }
 
@@ -370,14 +369,13 @@ body {
 }
 
 .lower .recent .posts .post .header .post-title {
-  font-size: clamp(2em, 3vw, 4em);
+  font-size: clamp(1em, 3vw, 3em);
 }
 
 .lower .recent .posts .post .cta {
   color: white;
   text-decoration: none;
   padding: 0.2em 1em;
-  margin: 2em 0 2em 0;
   width: 90%;
   border: 0.1em solid white;
   font-size: clamp(1.5em, 3vw, 5em);
@@ -583,6 +581,12 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  text-align: center;
+}
+
+.newsletter h3 {
+  font-family: 'Akira Expanded';
+  color: white;
 }
 
 .newsletter .back-cta, .newsletter p {
@@ -681,6 +685,61 @@ body {
   }
 }
 
+@media only screen and (orientation: landscape) {
+  .upper {
+    height: 100vh;
+  }
+  .upper .hero {
+    height: 100%;
+    width: 100%;
+  }
+  .upper .hero .names {
+    font-size: 2em;
+  }
+  .lower {
+    height: 150vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .lower .recent {
+    height: 100%;
+  }
+  .lower .recent .posts {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    margin-bottom: 5em;
+  }
+  .lower .recent .posts .post {
+    height: 100vh;
+  }
+  .contact-main {
+    height: 100%;
+  }
+  .contact-main .form-container {
+    margin: 15em 0;
+  }
+  .newsletter {
+    color: white;
+    margin: 10em 0;
+    text-align: center;
+  }
+  .newsletter h3 {
+    font-family: 'Akira Expanded';
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .navbar-desktop {
     display: -webkit-box;
@@ -750,6 +809,25 @@ body {
   .upper .hero {
     width: 90%;
   }
+  .lower .recent {
+    width: 90%;
+  }
+  .lower .recent .posts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .lower .recent .posts .post {
+    height: 50%;
+  }
+  .newsletter h3 {
+    font-family: 'Akira Expanded';
+    color: white;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -778,9 +856,10 @@ body {
         -ms-flex-direction: row;
             flex-direction: row;
     width: 100vw;
+    height: 100vh;
   }
   .lower .recent {
-    width: 75%;
+    width: 100%;
   }
   .lower .recent .posts {
     display: -webkit-box;
