@@ -452,7 +452,6 @@ body {
       width: 80%;
       justify-content: center;
       flex-direction: column;
-      z-index: 1;
 
       .submit-btn {
         padding: 0.5em;
@@ -513,6 +512,7 @@ body {
 
     .back-cta {
       padding: 0 0.5em;
+      color: rgb(184, 32, 255);
     }
   }
 }
@@ -542,6 +542,7 @@ body {
 
     .back-cta {
       padding: 0 0.5em;
+      color: rgb(184, 32, 255);
     }
 
     input {
