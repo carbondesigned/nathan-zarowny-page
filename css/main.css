@@ -195,6 +195,14 @@ body {
 .nav-links-mobile.show .media .items i {
   padding: 0 1em;
   font-size: clamp(1.5em, 3vw, 3em);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.nav-links-mobile.show .media .items i:hover, .nav-links-mobile.show .media .items i:focus {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  color: #FF8401;
 }
 
 .hamburger.active .line1 {
@@ -410,6 +418,14 @@ body {
 .footer .media .items i {
   padding: 0 1em 0 1em;
   font-size: clamp(1em, 3vw, 1em);
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.footer .media .items i:hover, .footer .media .items i:focus {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  color: #FF8401;
 }
 
 .footer .links {
@@ -787,6 +803,9 @@ body {
     background-color: white;
     color: black;
   }
+  .navbar-desktop .nav-links-desktop .media {
+    display: none;
+  }
   .navbar-desktop .nav-links-desktop .newsletter-cta {
     background-color: white;
     color: black;
@@ -833,6 +852,23 @@ body {
 }
 
 @media only screen and (min-width: 1440px) {
+  .navbar-desktop .nav-links-desktop .media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navbar-desktop .nav-links-desktop .media i {
+    padding: 0 0.5em;
+    font-size: clamp(0.5em, 3vw, 1.3em);
+    -webkit-transition: 300ms;
+    transition: 300ms;
+  }
+  .navbar-desktop .nav-links-desktop .media i:focus, .navbar-desktop .nav-links-desktop .media i:hover {
+    color: #FF8401;
+  }
   .upper {
     height: 100vh;
     display: -webkit-box;
