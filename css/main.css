@@ -695,7 +695,7 @@ body {
     width: 100%;
   }
   .upper .hero .names {
-    font-size: clamp(3em, 4vw, 6em);
+    font-size: clamp(3em, 4vw, 5em);
   }
   .lower {
     height: 150vh;
