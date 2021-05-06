@@ -608,7 +608,7 @@ body {
       width: 100%;
 
       .names {
-        font-size: 2em;
+        font-size: clamp(3em, 4vw, 6em);
       }
     }
   }
@@ -767,6 +767,10 @@ body {
 
       .main-name, .names {
         margin-right: 2em;
+      }
+
+      .names {
+        // font-size: clamp(3em, 3vw, 6em);
       }
     }
   }
