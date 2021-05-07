@@ -61,6 +61,7 @@ body {
     z-index: 10;
     transition: 300ms;
     cursor: pointer;
+    white-space: nowrap;
 
     &:hover,
     &:focus {
@@ -220,6 +221,7 @@ body {
 
     .title {
       margin-top: 8em;
+      animation: letterSpacing 1s ease;
 
       .main-name {
         color: $clr-accent;
@@ -237,17 +239,17 @@ body {
       white-space: nowrap;
 
       .origin-name {
-        animation: slideUp 1s;
+        animation: slideUp 2s;
       }
 
       .name2 {
-        animation: slideUp .5s;
+        animation: slideUp 1s;
         -webkit-text-stroke-color: rgba(255, 255, 255, 0.5);
       }
 
       .name3 {
         -webkit-text-stroke-color: rgba(255, 255, 255, 0.25);
-        animation: slideUp .25s;
+        animation: slideUp .5s;
       }
     }
   }
@@ -576,45 +578,7 @@ body {
   }
 }
 
-
-// Keyframes
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-100%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
 // Media Queries
-
 @media only screen and (orientation: landscape) {
   .upper {
     height: 100vh;
@@ -683,6 +647,7 @@ body {
     position: fixed;
     -webkit-box-shadow: inset 0px 50px 2000px 5px rgba(0, 0, 0, 0.5);
     box-shadow: inset 0px 50px 50px 5px rgba(0, 0, 0, 0.5);
+    animation: slideDown 1s;
 
 
     .logo {
@@ -690,6 +655,7 @@ body {
       z-index: 10;
       transition: 300ms;
       cursor: pointer;
+      white-space: nowrap;
 
       &:hover,
       &:focus {
@@ -864,5 +830,52 @@ body {
     .recent {
       width: 90%;
     }
+  }
+}
+
+// Keyframes
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes letterSpacing {
+  0% {
+    letter-spacing: 5em;
+    transform: scaleY(2);
+  }
+
+  100% {
+    letter-spacing: 0px;
+    transform: scaleY(1);;
   }
 }
