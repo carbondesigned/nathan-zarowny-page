@@ -936,11 +936,13 @@ body {
 
 @-webkit-keyframes letterSpacing {
   0% {
-    letter-spacing: 5em;
-    -webkit-transform: scaleY(2);
-            transform: scaleY(2);
+    opacity: 0;
+    letter-spacing: 2em;
+    -webkit-transform: scaleY(1.2);
+            transform: scaleY(1.2);
   }
   100% {
+    opacity: 1;
     letter-spacing: 0px;
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
@@ -949,11 +951,13 @@ body {
 
 @keyframes letterSpacing {
   0% {
-    letter-spacing: 5em;
-    -webkit-transform: scaleY(2);
-            transform: scaleY(2);
+    opacity: 0;
+    letter-spacing: 2em;
+    -webkit-transform: scaleY(1.2);
+            transform: scaleY(1.2);
   }
   100% {
+    opacity: 1;
     letter-spacing: 0px;
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
