@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -6,7 +8,7 @@
 }
 
 @font-face {
-  font-family: 'Akira Expanded';
+  font-family: "Akira Expanded";
   src: url("/font/Akira-Expanded-Demo.otf");
 }
 
@@ -15,7 +17,7 @@ html {
 }
 
 body {
-  font-family: 'Akira Expanded', sans-serif;
+  font-family: "Akira Expanded", sans-serif;
   position: absolute;
 }
 
@@ -203,7 +205,7 @@ body {
 .nav-links-mobile.show .media .items i:hover, .nav-links-mobile.show .media .items i:focus {
   -webkit-transform: translateY(5px);
           transform: translateY(5px);
-  color: #FF8401;
+  color: #ff8401;
 }
 
 .hamburger.active .line1 {
@@ -254,7 +256,7 @@ body {
 }
 
 .upper .hero .title .main-name {
-  color: #FF8401;
+  color: #ff8401;
   font-size: clamp(1.5em, 6vw, 8em);
   white-space: nowrap;
 }
@@ -281,8 +283,8 @@ body {
 
 .upper .hero .names .name3 {
   -webkit-text-stroke-color: rgba(255, 255, 255, 0.25);
-  -webkit-animation: slideUp .5s;
-          animation: slideUp .5s;
+  -webkit-animation: slideUp 0.5s;
+          animation: slideUp 0.5s;
 }
 
 .lower {
@@ -308,7 +310,7 @@ body {
 }
 
 .lower .recent .posts .post {
-  background-image: url("/img/cover-bg.png");
+  background-image: url("/img/pre-order-cover.png");
   background-size: cover;
   background-position: center;
   height: 35%;
@@ -333,13 +335,13 @@ body {
 }
 
 .lower .recent .posts .post:nth-child(2) {
-  background-image: url("/img/interview2.jpg");
+  background-image: url("/img/cover-bg.png");
   background-size: cover;
   background-position: center;
 }
 
 .lower .recent .posts .post::after {
-  content: '';
+  content: "";
   width: 100%;
   height: 0.2em;
   background-color: white;
@@ -360,7 +362,7 @@ body {
 
 .lower .recent .posts .post:hover::after, .lower .recent .posts .post:focus::after {
   height: 0.5em;
-  background-color: #FF8401;
+  background-color: #ff8401;
   border-radius: 30px;
   z-index: 0;
 }
@@ -370,14 +372,14 @@ body {
 }
 
 .lower .recent .posts .post .header .genre {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #bebebe;
   font-weight: 800;
   text-transform: uppercase;
 }
 
 .lower .recent .posts .post .header .post-title {
-  font-size: clamp(1em, 3vw, 3em);
+  font-size: clamp(1em, 3vw, 2em);
 }
 
 .lower .recent .posts .post .cta {
@@ -386,7 +388,7 @@ body {
   padding: 0.2em 1em;
   width: 90%;
   border: 0.1em solid white;
-  font-size: clamp(1.5em, 3vw, 5em);
+  font-size: clamp(1.2em, 3vw, 3em);
   white-space: nowrap;
   cursor: pointer;
   -webkit-transition: 300ms;
@@ -409,7 +411,7 @@ body {
           flex-direction: column;
   background-color: white;
   color: black;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   text-align: center;
   padding: 1em 0;
 }
@@ -424,7 +426,7 @@ body {
 .footer .media .items i:hover, .footer .media .items i:focus {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
-  color: #FF8401;
+  color: #ff8401;
 }
 
 .footer .links {
@@ -528,7 +530,7 @@ body {
   cursor: pointer;
   background-color: white;
   color: black;
-  font-family: 'Akira Expanded';
+  font-family: "Akira Expanded";
 }
 
 .wrapper .contact-main .form-container .form input {
@@ -571,8 +573,9 @@ body {
   color: black;
 }
 
-.wrapper .contact-main .back-cta, .wrapper .contact-main p {
-  font-family: 'Poppins';
+.wrapper .contact-main .back-cta,
+.wrapper .contact-main p {
+  font-family: "Poppins";
   padding: 5em 0;
 }
 
@@ -602,12 +605,13 @@ body {
 }
 
 .newsletter h3 {
-  font-family: 'Akira Expanded';
+  font-family: "Akira Expanded";
   color: white;
 }
 
-.newsletter .back-cta, .newsletter p {
-  font-family: 'Poppins';
+.newsletter .back-cta,
+.newsletter p {
+  font-family: "Poppins";
   padding: 2em 0;
   text-align: center;
 }
@@ -684,7 +688,7 @@ body {
     text-align: center;
   }
   .newsletter h3 {
-    font-family: 'Akira Expanded';
+    font-family: "Akira Expanded";
   }
 }
 
@@ -782,7 +786,7 @@ body {
     height: 50%;
   }
   .newsletter h3 {
-    font-family: 'Akira Expanded';
+    font-family: "Akira Expanded";
     color: white;
   }
 }
@@ -803,7 +807,7 @@ body {
     transition: 300ms;
   }
   .navbar-desktop .nav-links-desktop .media i:focus, .navbar-desktop .nav-links-desktop .media i:hover {
-    color: #FF8401;
+    color: #ff8401;
   }
   .upper {
     height: 100vh;
@@ -818,7 +822,8 @@ body {
     background-image: url("/img/main-section-bg.png");
     width: 90%;
   }
-  .upper .hero .main-name, .upper .hero .names {
+  .upper .hero .main-name,
+  .upper .hero .names {
     margin-right: 2em;
   }
   .lower {
