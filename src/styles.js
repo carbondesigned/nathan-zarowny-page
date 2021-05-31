@@ -1,0 +1,24 @@
+import styled, { createGlobalStyle } from "styled-components"
+import AkiraExpanded from "./font/Akira-Expanded-Demo.otf"
+
+export const Styles = createGlobalStyle`
+    *, *::before, *::after {
+        margin: 0;
+        box-sizing: border-box;
+        padding: 0;
+    }
+
+    @font-face {
+    font-family: 'Akira Expanded';
+    src: url(${AkiraExpanded});
+    }
+
+
+    body {
+        font-family: 'Akira Expanded';
+    }
+`
+
+export const HeadlineTitle = styled.h2`
+  font-size: clamp(1.2em, 3em, 3em);
+`
