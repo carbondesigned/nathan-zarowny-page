@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components"
-import AkiraExpanded from "./font/Akira-Expanded-Demo.otf"
+import AkiraExpanded from "./Assets/font/Akira-Expanded-Demo.otf"
 
 export const Styles = createGlobalStyle`
     *, *::before, *::after {
@@ -16,6 +16,7 @@ export const Styles = createGlobalStyle`
 
     body {
         font-family: 'Akira Expanded';
+        overflow-y: scroll;
     }
 `
 

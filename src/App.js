@@ -1,14 +1,15 @@
 import React from "react"
-import HomePage from "./pages/HomePage"
 import { Styles } from "./styles"
 import Theme from "./Theme"
+
+import Home from "./pages/Home"
 
 function App() {
   return (
     <div className="App">
       <Theme>
         <Styles />
-        <HomePage />
+        <Home />
       </Theme>
     </div>
   )
