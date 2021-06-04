@@ -9,14 +9,20 @@ const index = ({ toggle }) => {
   return (
     <StyledNav>
       <div className="logo">
-        <h2>Nathan Zarowny</h2>
+        <StyledLink to="/">
+          <h2>Nathan Zarowny</h2>
+        </StyledLink>
       </div>
       <ul className="nav-links">
         <li>
-          <StyledLink className="contact-cta">Contact</StyledLink>
+          <StyledLink to="/contact" className="contact-cta">
+            Contact
+          </StyledLink>
         </li>
         <li>
-          <StyledLink className="newsletter-cta">Newsletter</StyledLink>
+          <StyledLink to="/newsletter" className="newsletter-cta">
+            Newsletter
+          </StyledLink>
         </li>
         <li>
           <Socials />

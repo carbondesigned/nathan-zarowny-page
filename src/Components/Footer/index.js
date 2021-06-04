@@ -24,6 +24,7 @@ const StyledFooter = styled.footer`
   flex-direction: column;
   align-items: center;
   text-align: center;
+  width: 100%;
 
   .pages {
     display: flex;

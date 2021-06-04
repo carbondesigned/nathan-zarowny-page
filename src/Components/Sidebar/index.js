@@ -12,10 +12,18 @@ const index = ({ toggle, isOpen }) => {
       </div>
       <ul className="sidebar-links">
         <li>
-          <StyledLink className="contact-cta">Contact</StyledLink>
+          <StyledLink onClick={toggle} to="/contact" className="contact-cta">
+            Contact
+          </StyledLink>
         </li>
         <li>
-          <StyledLink className="newsletter-cta">Newsletter</StyledLink>
+          <StyledLink
+            onClick={toggle}
+            to="/newsletter"
+            className="newsletter-cta"
+          >
+            Newsletter
+          </StyledLink>
         </li>
         <li>
           <Socials />

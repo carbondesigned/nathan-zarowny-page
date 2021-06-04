@@ -1,11 +1,12 @@
 import React, { useState } from "react"
-import { BrowserRouter as Router } from "react-router-dom"
+import { Route, Link, BrowserRouter as Router } from "react-router-dom"
 import { Styles } from "./styles"
 import Theme from "./Theme"
 
 import Navbar from "./Components/Navbar"
 import Sidebar from "./Components/Sidebar"
 import Home from "./pages/Home"
+import Contact from "./pages/Contact"
 import Footer from "./Components/Footer"
 
 function App() {
@@ -21,7 +22,12 @@ function App() {
         <Router>
           <Sidebar isOpen={isOpen} toggle={toggle} />
           <Navbar toggle={toggle} />
-          <Home />
+          <Route path="/" exact>
+            <Home />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
           <Footer />
         </Router>
       </Theme>
