@@ -11,8 +11,10 @@ const Posts = () => {
       <h2 className="post-section-title">
         Stay <span>up to date</span> with Nathan Zarowny
       </h2>
-      <PostComponent {...postOne} />
-      <PostComponent {...postTwo} />
+      <div className="posts">
+        <PostComponent {...postOne} />
+        <PostComponent {...postTwo} />
+      </div>
     </StyledPostSection>
   )
 }
@@ -30,6 +32,7 @@ const StyledPostSection = styled.section`
     margin: 0 0 1em 0;
     padding-left: 1em;
     position: relative;
+    align-self: flex-start;
 
     &::after {
       content: "";
@@ -43,6 +46,17 @@ const StyledPostSection = styled.section`
 
     span {
       color: ${(p) => p.theme.colors.mainOrange};
+    }
+  }
+
+  .posts {
+    display: flex;
+    width: 100%;
+    gap: 2em;
+    flex-direction: column;
+
+    @media only screen and (min-width: 1024px) {
+      flex-direction: row;
     }
   }
 `
