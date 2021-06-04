@@ -17,7 +17,7 @@ const StyledNames = styled.div`
   color: transparent;
   -webkit-text-stroke-color: #fff;
   -webkit-text-stroke-width: 0.05em;
-  font-size: clamp(1.35em, 3vw, 3em);
+  font-size: clamp(1.35em, 3.5vw, 3.5em);
   transform: translateY(-2em);
 `
 

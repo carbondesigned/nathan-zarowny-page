@@ -21,5 +21,5 @@ export const Styles = createGlobalStyle`
 `
 
 export const HeadlineTitle = styled.h2`
-  font-size: clamp(1.2em, 3em, 3em);
+  font-size: clamp(1.5em, 3.5vw, 3.5em);
 `

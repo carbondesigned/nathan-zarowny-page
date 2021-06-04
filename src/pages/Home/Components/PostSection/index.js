@@ -4,13 +4,14 @@ import styled from "styled-components"
 import { postOne, postTwo } from "./PostData"
 
 import PostComponent from "./PostComponent"
+import { HeadlineTitle } from "../../../../styles"
 
 const Posts = () => {
   return (
     <StyledPostSection>
-      <h2 className="post-section-title">
+      <HeadlineTitle className="post-section-title">
         Stay <span>up to date</span> with Nathan Zarowny
-      </h2>
+      </HeadlineTitle>
       <div className="posts">
         <PostComponent {...postOne} />
         <PostComponent {...postTwo} />

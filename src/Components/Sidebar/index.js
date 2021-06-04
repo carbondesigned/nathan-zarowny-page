@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 import { FaTimes } from "react-icons/fa"
+import Socials from "../Socials"
 
 const index = ({ toggle, isOpen }) => {
   return (
@@ -16,6 +17,9 @@ const index = ({ toggle, isOpen }) => {
         <li>
           <StyledLink className="newsletter-cta">Newsletter</StyledLink>
         </li>
+        <li>
+          <Socials />
+        </li>
       </ul>
     </StyledSidebar>
   )
@@ -29,7 +33,7 @@ const StyledSidebar = styled.div`
   top: ${({ isOpen }) => (isOpen ? "0" : "100%")};
   left: 0;
   z-index: 20;
-  background-color: ${(p) => p.theme.colors.mainBlue};
+  background-color: rgba(0, 2, 124, 0.75);
   color: white;
   display: flex;
   flex-direction: column;
@@ -41,14 +45,14 @@ const StyledSidebar = styled.div`
     display: flex;
     flex-direction: row-reverse;
     padding: 1em;
-    font-size: 1.5em;
+    font-size: 2em;
+    background-color: #00037c;
   }
 
   .sidebar-links {
     display: flex;
     flex-direction: column;
     width: 100%;
-    align-items: center;
 
     .contact-cta {
       background-color: white;
@@ -59,6 +63,12 @@ const StyledSidebar = styled.div`
     .newsletter-cta {
       border: 0.2em solid white;
       padding: 1em 2em;
+      transition: 300ms;
+
+      &:hover {
+        background-color: white;
+        color: black;
+      }
     }
 
     li {
@@ -66,6 +76,11 @@ const StyledSidebar = styled.div`
       padding: 2em;
       width: 100%;
     }
+  }
+
+  a {
+    color: white;
+    font-size: 1.2em;
   }
 `
 

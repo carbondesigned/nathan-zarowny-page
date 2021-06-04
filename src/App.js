@@ -6,6 +6,7 @@ import Theme from "./Theme"
 import Navbar from "./Components/Navbar"
 import Sidebar from "./Components/Sidebar"
 import Home from "./pages/Home"
+import Footer from "./Components/Footer"
 
 function App() {
   const [isOpen, setIsOpen] = useState(false)
@@ -21,6 +22,7 @@ function App() {
           <Sidebar isOpen={isOpen} toggle={toggle} />
           <Navbar toggle={toggle} />
           <Home />
+          <Footer />
         </Router>
       </Theme>
     </div>

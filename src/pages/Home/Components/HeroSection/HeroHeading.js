@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Theme from "../../../../Theme"
+import { HeadlineTitle } from "../../../../styles"
 
 import HeroImgMobile from "../../../../Assets/img/main-bg-mobile.png"
 import HeroImg from "../../../../Assets/img/main-section-bg.png"
@@ -9,7 +10,7 @@ const HeroHeading = () => {
   return (
     <StyledHeroHeading>
       <StyledMainHeading className="main-heading">
-        <h1>Nathan Zarowny</h1>
+        <HeadlineTitle className="hero-title">Nathan Zarowny</HeadlineTitle>
       </StyledMainHeading>
     </StyledHeroHeading>
   )
@@ -37,8 +38,7 @@ const StyledMainHeading = styled.div`
   flex-direction: column;
   padding: 6em 1em;
 
-  h1 {
-    font-size: clamp(1.35em, 3vw, 3em);
+  .hero-title {
     position: relative;
 
     &::after {
