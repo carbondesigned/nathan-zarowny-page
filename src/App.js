@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Route, Link, BrowserRouter as Router } from "react-router-dom"
+import { Route, Link, BrowserRouter as Router, Switch } from "react-router-dom"
 import { Styles } from "./styles"
 import Theme from "./Theme"
 
@@ -7,6 +7,7 @@ import Navbar from "./Components/Navbar"
 import Sidebar from "./Components/Sidebar"
 import Home from "./pages/Home"
 import Contact from "./pages/Contact"
+import AllPosts from "./pages/AllPosts"
 import Footer from "./Components/Footer"
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route path="/contact">
             <Contact />
+          </Route>
+          <Route path="/posts">
+            <AllPosts />
           </Route>
           <Footer />
         </Router>

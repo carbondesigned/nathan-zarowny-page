@@ -52,10 +52,18 @@ const StyledPost = styled.div`
     text-align: left;
     width: 100%;
 
+    .post-title {
+      font-size: clamp(1.2em, 3vw, 4em);
+    }
+
     .genre {
       text-transform: uppercase;
       color: ${(p) => p.theme.colors.mainGray};
     }
+  }
+
+  @media screen and (min-width: 1300px) {
+    min-height: 50vh;
   }
 `
 

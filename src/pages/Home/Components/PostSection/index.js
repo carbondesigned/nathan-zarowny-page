@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 
 import { postOne, postTwo } from "./PostData"
 
@@ -16,6 +17,7 @@ const Posts = () => {
         <PostComponent {...postOne} />
         <PostComponent {...postTwo} />
       </div>
+      <StyledButton to="/posts">Catch up With Nathan</StyledButton>
     </StyledPostSection>
   )
 }
@@ -34,6 +36,28 @@ const StyledPostSection = styled.section`
     padding-left: 1em;
     position: relative;
     align-self: flex-start;
+    transition: 300ms;
+    background: rgb(255, 132, 1);
+    background: linear-gradient(
+      47deg,
+      rgba(255, 132, 1, 0.2) 0%,
+      rgba(0, 0, 0, 0.15) 45%
+    );
+    cursor: default;
+
+    &:hover {
+      background: rgb(255, 132, 1);
+      background: linear-gradient(
+        47deg,
+        rgba(255, 132, 1, 0.65) 0%,
+        rgba(0, 0, 0, 0.15) 45%
+      );
+      transition: 300ms;
+      transform: translateX(10px);
+      &:hover::after {
+        width: 0.3em;
+      }
+    }
 
     &::after {
       content: "";
@@ -43,6 +67,7 @@ const StyledPostSection = styled.section`
       width: 0.2em;
       top: 0;
       left: 0;
+      transition: 300ms;
     }
 
     span {
@@ -60,6 +85,13 @@ const StyledPostSection = styled.section`
       flex-direction: row;
     }
   }
+`
+
+const StyledButton = styled(Link)`
+  background-color: white;
+  color: black;
+  padding: 1em 2em;
+  text-decoration: none;
 `
 
 export default Posts

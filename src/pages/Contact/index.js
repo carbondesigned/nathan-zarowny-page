@@ -58,6 +58,7 @@ const StyledContactSection = styled.section`
       color: white;
       padding: 0.5em 1em;
       margin-bottom: 1em;
+      font-family: ${(p) => p.theme.fonts.secFont};
     }
 
     textarea {
@@ -65,6 +66,8 @@ const StyledContactSection = styled.section`
       border: 0.2em solid white;
       padding: 0.5em 1em;
       outline: none;
+      transition: 300ms;
+      font-family: ${(p) => p.theme.fonts.secFont};
 
       &:focus {
         border: 0.2em solid ${(p) => p.theme.colors.mainOrange};

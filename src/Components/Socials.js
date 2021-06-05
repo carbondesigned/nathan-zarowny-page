@@ -9,16 +9,16 @@ import { SiTiktok } from "react-icons/si"
 const Socials = () => {
   return (
     <StyledSocials>
-      <a href="https://instagram.com/">
+      <a href="https://www.instagram.com/nathan_zarowny/">
         <AiFillInstagram />
       </a>
-      <a href="https://youtube.com/">
+      <a href="https://www.youtube.com/channel/UC2NI5_bZRtcR8w9Re4wPNnQ">
         <AiFillYoutube />
       </a>
-      <a href="https://spotify.com/">
+      <a href="https://open.spotify.com/artist/1EeDWxd7UtEygWCgkSCFhR?si=Kn71-4XbTh6eNvChfqOE4w&dl_branch=1&nd=1">
         <FaSpotify />
       </a>
-      <a href="https://tiktok.com/">
+      <a href="https://www.tiktok.com/@nathan_zarowny?lang=en">
         <SiTiktok />
       </a>
     </StyledSocials>

@@ -29,6 +29,11 @@ const StyledHeroHeading = styled.section`
   @media only screen and (min-width: 768px) {
     background-image: url(${HeroImg});
   }
+
+  @media only screen and (min-width: 1040px) {
+    min-height: 75vh;
+    padding-top: 5em;
+  }
 `
 
 const StyledMainHeading = styled.div`
