@@ -5,9 +5,10 @@ import PostComponent from "../Home/Components/PostSection/PostComponent"
 import mainBg from "../../Assets/img/background-img.png"
 
 import {
-  postOne,
-  postTwo,
-  postThree,
+  RWhatWeGot,
+  PreSaveWWG,
+  RSadBoy,
+  InGMT,
 } from "../Home/Components/PostSection/PostData"
 import { HeadlineTitle } from "../../styles"
 import Theme from "../../Theme"
@@ -19,9 +20,10 @@ const index = () => {
         Stay up to date with <span>Nathan Zarowny</span>
       </h1>
       <div className="wrapper">
-        <PostComponent {...postOne} />
-        <PostComponent {...postTwo} />
-        <PostComponent {...postThree} />
+        <PostComponent {...RWhatWeGot} />
+        <PostComponent {...PreSaveWWG} />
+        <PostComponent {...RSadBoy} />
+        <PostComponent {...InGMT} />
       </div>
       <StyledContactBg />
     </StyledPosts>

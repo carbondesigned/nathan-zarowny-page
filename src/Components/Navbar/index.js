@@ -4,37 +4,41 @@ import { Link } from "react-router-dom"
 
 import Sidebar from "../Sidebar"
 import Socials from "../Socials"
+import PromoBanner from "../PromoBanner"
 
 const index = ({ toggle }) => {
   return (
-    <StyledNav>
-      <div className="logo">
-        <StyledLink to="/">
-          <h2>Nathan Zarowny</h2>
-        </StyledLink>
-      </div>
-      <ul className="nav-links">
-        <li>
-          <StyledLink to="/contact" className="contact-cta">
-            Contact
+    <>
+      <PromoBanner />
+      <StyledNav>
+        <div className="logo">
+          <StyledLink to="/">
+            <h2>Nathan Zarowny</h2>
           </StyledLink>
-        </li>
-        <li>
+        </div>
+        <ul className="nav-links">
+          <li>
+            <StyledLink to="/contact" className="contact-cta">
+              Contact
+            </StyledLink>
+          </li>
+          {/* <li>
           <StyledLink to="/newsletter" className="newsletter-cta">
             Newsletter
           </StyledLink>
-        </li>
-        <li>
-          <Socials />
-        </li>
-      </ul>
+        </li> */}
+          <li>
+            <Socials />
+          </li>
+        </ul>
 
-      <div className="hamburger" onClick={toggle}>
-        <div className="line line1"></div>
-        <div className="line line2"></div>
-        <div className="line line3"></div>
-      </div>
-    </StyledNav>
+        <div className="hamburger" onClick={toggle}>
+          <div className="line line1"></div>
+          <div className="line line2"></div>
+          <div className="line line3"></div>
+        </div>
+      </StyledNav>
+    </>
   )
 }
 
@@ -45,7 +49,7 @@ const StyledNav = styled.nav`
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  top: 0;
+  top: 3em;
   color: white;
   z-index: 10;
 

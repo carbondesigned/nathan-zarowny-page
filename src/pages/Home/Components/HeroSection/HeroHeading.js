@@ -8,13 +8,24 @@ import HeroImg from "../../../../Assets/img/main-section-bg.png"
 
 const HeroHeading = () => {
   return (
-    <StyledHeroHeading>
-      <StyledMainHeading className="main-heading">
-        <HeadlineTitle className="hero-title">Nathan Zarowny</HeadlineTitle>
-      </StyledMainHeading>
-    </StyledHeroHeading>
+    <StyledWrapper className="wrapper">
+      <StyledHeroHeading>
+        <StyledMainHeading className="main-heading">
+          <HeadlineTitle className="hero-title">Nathan Zarowny</HeadlineTitle>
+        </StyledMainHeading>
+      </StyledHeroHeading>
+    </StyledWrapper>
   )
 }
+
+const StyledWrapper = styled.section`
+  width: 100%;
+
+  @media only screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+`
 
 const StyledHeroHeading = styled.section`
   color: ${(p) => p.theme.colors.mainOrange};

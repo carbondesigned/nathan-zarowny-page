@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 
-import { postOne, postTwo } from "./PostData"
+import { RSadBoy, RWhatWeGot } from "./PostData"
 
 import PostComponent from "./PostComponent"
 import { HeadlineTitle } from "../../../../styles"
@@ -10,12 +10,12 @@ import { HeadlineTitle } from "../../../../styles"
 const Posts = () => {
   return (
     <StyledPostSection>
-      <HeadlineTitle className="post-section-title">
+      <h2 className="post-section-title">
         Stay <span>up to date</span> with Nathan Zarowny
-      </HeadlineTitle>
+      </h2>
       <div className="posts">
-        <PostComponent {...postOne} />
-        <PostComponent {...postTwo} />
+        <PostComponent {...RWhatWeGot} />
+        <PostComponent {...RSadBoy} />
       </div>
       <StyledButton to="/posts">Catch up With Nathan</StyledButton>
     </StyledPostSection>
@@ -31,6 +31,7 @@ const StyledPostSection = styled.section`
   gap: 1.5em;
 
   .post-section-title {
+    font-size: clamp(1em, 4vw, 2.75em);
     color: white;
     margin: 0 0 1em 0;
     padding-left: 1em;
@@ -92,6 +93,8 @@ const StyledButton = styled(Link)`
   color: black;
   padding: 1em 2em;
   text-decoration: none;
+  white-space: nowrap;
+  margin: 1em 0;
 `
 
 export default Posts

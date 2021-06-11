@@ -8,7 +8,7 @@ const PostComponent = ({ genre, title, cta, cover, url }) => {
         <h4 className="genre">{genre}</h4>
         <h2 className="post-title">{title}</h2>
       </div>
-      <StyledCta href="#" className="post-cta">
+      <StyledCta href={url} target="_blank" className="post-cta">
         {cta}
       </StyledCta>
     </StyledPost>
