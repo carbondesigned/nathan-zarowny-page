@@ -22,17 +22,17 @@ const StyledPromoBanner = styled.div`
   top: 0;
 
   .promo {
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 `
 
 const BannerAnim = keyframes`
     0% {
-        left: -35%;
+        transform: translateX(105%) ;
     }
 
     100% {
-        left: 100%;
+      transform: translateX(-35%);
     }
 
 `
@@ -42,12 +42,10 @@ const BannerAnim = keyframes`
 // `
 
 const StyledPromo = styled.a`
-  position: absolute;
-  top: 0.5em;
   color: black;
   text-decoration: none;
   display: inline-block;
-  animation: ${BannerAnim} 10s linear infinite;
+  animation: ${BannerAnim} 20s linear infinite;
   transition: 300ms;
   width: 100%;
   white-space: nowrap;
