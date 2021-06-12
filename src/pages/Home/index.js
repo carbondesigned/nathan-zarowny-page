@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { post } from "request"
 import styled from "styled-components"
 import mainBg from "../../Assets/img/background-img.png"
 

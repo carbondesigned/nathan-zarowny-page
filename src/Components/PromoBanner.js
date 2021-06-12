@@ -5,7 +5,7 @@ const PromoBanner = () => {
   return (
     <StyledPromoBanner>
       <div className="promo">
-        <StyledPromo href="#" target="_blank">
+        <StyledPromo href="https://orcd.co/nzwwgio" target="_blank">
           New Release - What We got (is over)
         </StyledPromo>
       </div>
