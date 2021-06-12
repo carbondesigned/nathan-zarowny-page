@@ -49,9 +49,15 @@ const StyledNav = styled.nav`
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  top: 3em;
+  top: 2em;
   color: white;
   z-index: 10;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.804359243697479) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
 
   .logo {
     font-size: clamp(0.75em, 3vw, 1.2em);

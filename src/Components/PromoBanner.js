@@ -17,7 +17,7 @@ const StyledPromoBanner = styled.div`
   width: 100%;
   z-index: 10;
   background-color: white;
-  padding: 1em;
+  padding: 0.5em;
   position: fixed;
   top: 0;
 
@@ -32,7 +32,7 @@ const BannerAnim = keyframes`
     }
 
     100% {
-      transform: translateX(-35%);
+      transform: translateX(-105%);
     }
 
 `

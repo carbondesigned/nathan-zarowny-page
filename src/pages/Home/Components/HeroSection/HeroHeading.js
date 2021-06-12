@@ -53,6 +53,7 @@ const StyledMainHeading = styled.div`
   align-items: center;
   flex-direction: column;
   padding: 6em 1em;
+  margin-top: 2em;
 
   .hero-title {
     position: relative;
